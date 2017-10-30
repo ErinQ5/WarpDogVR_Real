@@ -13,7 +13,7 @@ public class FollowBone : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        noYlocation = new Vector3(bone.transform.position.x, .55f, bone.transform.position.z);
+
     }
 	
 	// Update is called once per frame
