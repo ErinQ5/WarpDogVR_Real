@@ -872,7 +872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  pickedUp: 0
+  bone: {fileID: 1869130555}
 --- !u!1 &662789290
 GameObject:
   m_ObjectHideFlags: 0
