@@ -32,12 +32,16 @@ public class FollowBone : MonoBehaviour {
 
 	public void followBone(){
 		//transform.position = Vector3.MoveTowards (transform.position,new Vector3(0,1,0), speed*Time.deltaTime);
-		if(pickedUp == true && isColliding == false){
-			transform.position = Vector3.Lerp(transform.position, noYlocation, speed * Time.deltaTime);
+		if (pickedUp == true) {
+			if (isColliding == false) {
+				transform.position = Vector3.Lerp (transform.position, noYlocation, speed * Time.deltaTime);
+			}
 		}
 	}
 
-    public void OnCollisionStay(Collision collision) {
-        isColliding = true;
+    public void OnCollisionStay(Collision col) {
+		if(col.collider.tag == "Obstacles"){
+			isColliding = true;
+		}
     }
 }
