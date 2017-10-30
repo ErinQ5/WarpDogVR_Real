@@ -44,4 +44,8 @@ public class FollowBone : MonoBehaviour {
 			isColliding = true;
 		}
     }
+
+    public void OnCollisionExit(Collision col) {
+        isColliding = false;
+    }
 }

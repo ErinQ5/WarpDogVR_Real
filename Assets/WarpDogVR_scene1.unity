@@ -2290,7 +2290,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 575712585}
-        m_MethodName: followBone
+        m_MethodName: IsDetached
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
