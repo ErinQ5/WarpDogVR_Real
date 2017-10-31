@@ -19,7 +19,7 @@ public class FollowBone : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         noYlocation = new Vector3(bone.transform.position.x, .55f, bone.transform.position.z);
-        followBone ();
+        followBone();
 	}
 
 	public void IsPickedUp(){
