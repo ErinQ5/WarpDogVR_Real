@@ -10,6 +10,7 @@ public class FollowBone : MonoBehaviour {
     Vector3 noYlocation;
     public float speed = 1.0f;
     public Transform bone;
+	float damping = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,7 @@ public class FollowBone : MonoBehaviour {
 		//transform.position = Vector3.MoveTowards (transform.position,new Vector3(0,1,0), speed*Time.deltaTime);
 		if (pickedUp == true) {
 			if (isColliding == false) {
+				turnToPlayer ();
 				transform.position = Vector3.Lerp (transform.position, noYlocation, speed * Time.deltaTime);
 			}
 		}
@@ -48,4 +50,11 @@ public class FollowBone : MonoBehaviour {
     public void OnCollisionExit(Collision col) {
         isColliding = false;
     }
+
+	public void turnToPlayer(){
+		Vector3 dir = (bone.position - transform.position).normalized;
+		dir.y = 0;
+		Quaternion rot = Quaternion.LookRotation (dir);
+		transform.rotation = Quaternion.Slerp (transform.rotation, rot, damping * Time.deltaTime);
+	}
 }
