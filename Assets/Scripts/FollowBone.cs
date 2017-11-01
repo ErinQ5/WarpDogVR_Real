@@ -36,20 +36,23 @@ public class FollowBone : MonoBehaviour {
 		if (pickedUp == true) {
 			if (isColliding == false) {
 				turnToPlayer ();
-				transform.position = Vector3.Lerp (transform.position, noYlocation, speed * Time.deltaTime);
+				Vector3 MoveVector = noYlocation - transform.position;
+				MoveVector.Normalize ();
+				GetComponent<CharacterController> ().Move (MoveVector * speed * Time.deltaTime);
+//				transform.position = Vector3.Lerp (transform.position, noYlocation, speed * Time.deltaTime);
 			}
 		}
 	}
 
-    public void OnCollisionStay(Collision col) {
-		if(col.collider.tag == "Obstacles"){
-			isColliding = true;
-		}
-    }
-
-    public void OnCollisionExit(Collision col) {
-        isColliding = false;
-    }
+//    public void OnCollisionStay(Collision col) {
+//		if(col.collider.tag == "Obstacles"){
+//			isColliding = true;
+//		}
+//    }
+//
+//    public void OnCollisionExit(Collision col) {
+//        isColliding = false;
+//    }
 
 	public void turnToPlayer(){
 		Vector3 dir = (bone.position - transform.position).normalized;
