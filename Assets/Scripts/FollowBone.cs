@@ -23,17 +23,17 @@ public class FollowBone : MonoBehaviour {
         followBone();
 	}
 
-	public void IsPickedUp(){
+	/*public void IsPickedUp(){
 		pickedUp = true;
 	}
 
 	public void IsDetached(){
 		pickedUp = false;
-	}
+	}*/
 
 	public void followBone(){
 		//transform.position = Vector3.MoveTowards (transform.position,new Vector3(0,1,0), speed*Time.deltaTime);
-		if (pickedUp == true) {
+		//if (pickedUp == true) {
 			if (isColliding == false) {
 				turnToPlayer ();
 				Vector3 MoveVector = noYlocation - transform.position;
@@ -41,7 +41,7 @@ public class FollowBone : MonoBehaviour {
 				GetComponent<CharacterController> ().Move (MoveVector * speed * Time.deltaTime);
 //				transform.position = Vector3.Lerp (transform.position, noYlocation, speed * Time.deltaTime);
 			}
-		}
+		//}
 	}
 
 //    public void OnCollisionStay(Collision col) {
