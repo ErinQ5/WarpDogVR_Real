@@ -22,7 +22,9 @@ public class PressButton : MonoBehaviour {
                 buttons.checkMatch();
             }
             else {
-                buttons.enterCode(value);
+                if(!buttons.maxed()) {
+                    buttons.enterCode(value);
+                }
             }
         }
         else {

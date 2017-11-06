@@ -14,6 +14,10 @@ public class PuzzleOneCode : MonoBehaviour {
         text = this.GetComponent<UpdateText>();
     }
 
+    public bool maxed() {
+        return guess.Count > 6;
+    }
+
     public void enterCode(int value) {
         if (!done) {
             text.UpdateTextColor(Color.white);
