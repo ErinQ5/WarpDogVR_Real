@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PuzzleOneCode : MonoBehaviour {
 
+	public Transform disableParts;
+	public Transform removableFenceColliders;
     public int[] code = { 1, 2, 3, 4 };
     List<int> guess = new List<int>();
     string codetext = "";
@@ -46,6 +48,8 @@ public class PuzzleOneCode : MonoBehaviour {
                 text.UpdateTextColor(Color.green);
                 text.UpdateString("correct");
                 done = true;
+				disableParts.gameObject.SetActive (false);
+				removableFenceColliders.gameObject.SetActive (false);
             }
             else {
                 guess.Clear();
