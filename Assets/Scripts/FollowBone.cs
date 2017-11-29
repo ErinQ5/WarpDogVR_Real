@@ -37,8 +37,9 @@ public class FollowBone : MonoBehaviour {
 			if (isColliding == false) {
 				turnToPlayer ();
 				Vector3 MoveVector = noYlocation - transform.position;
-                if (!(MoveVector.magnitude < 1)) {
+                if (MoveVector.magnitude > 1) {
                     MoveVector.Normalize();
+                    MoveVector.y = -1f;
                     GetComponent<CharacterController>().Move(MoveVector * speed * Time.deltaTime);
                 }
 //				transform.position = Vector3.Lerp (transform.position, noYlocation, speed * Time.deltaTime);
