@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PuzzleOneCode : MonoBehaviour {
 
+	public GameObject testubeManager;
+	public GameObject Knob_1, Knob_2, Knob_3;
+	private TestTubeManager tubeManager;
 	public Transform disableParts;
 	public Transform removableFenceColliders;
     public int[] code = { 1, 2, 3, 4 };
@@ -14,6 +17,7 @@ public class PuzzleOneCode : MonoBehaviour {
 
     void Start() {
         text = this.GetComponent<UpdateText>();
+		tubeManager = GetComponent<TestTubeManager> ();
     }
 
     public bool maxed() {
@@ -48,11 +52,16 @@ public class PuzzleOneCode : MonoBehaviour {
                 text.UpdateTextColor(Color.green);
                 text.UpdateString("correct");
                 done = true;
+				Knob_1.transform.rotation = Quaternion.Euler (0f, 90f, 0f);
+				Knob_2.transform.rotation = Quaternion.Euler (0f, 90f, 0f);
+				Knob_3.transform.rotation = Quaternion.Euler (0f, 90f, 0f);
+				testubeManager.SetActive (true);
 				disableParts.gameObject.SetActive (false);
 				removableFenceColliders.gameObject.SetActive (false);
             }
             else {
                 guess.Clear();
+				testubeManager.SetActive (false);
                 text.UpdateTextColor(Color.red);
                 text.UpdateString("wrong");
                 codetext = "";
