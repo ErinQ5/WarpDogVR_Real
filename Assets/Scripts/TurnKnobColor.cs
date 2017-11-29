@@ -8,17 +8,18 @@ public class TurnKnobColor : MonoBehaviour {
 	//public Transform theKnob;
 	float knobRotation;
 	Color myColor;
-    Quaternion startRotation;
-    Vector3 startUp, startRight;
+  Quaternion startRotation;
+  Vector3 startUp, startRight;
+	private bool tubePuzzle_1, tubePuzzle_2, tubePuzzle_3;
 
 	// Use this for initialization
 	void Start () {
 		fluidMat = fluidRenderer.material;
 		myColor = fluidRenderer.material.color;
 
-        startRotation = transform.rotation;
-        //startUp = transform.up;
-        startRight = transform.right;
+    startRotation = transform.rotation;
+    //startUp = transform.up;
+    startRight = transform.right;
 	}
 	
 	// Update is called once per frame
@@ -30,12 +31,12 @@ public class TurnKnobColor : MonoBehaviour {
         if(dir > 0) {
             knobRotation = 360 - knobRotation;
         }
-		Debug.Log (knobRotation);
+		Debug.Log (knobRotation); 
 
-		if(knobRotation > 0 && knobRotation < 90){
-			Debug.Log ("change to red");
-			myColor = new Color(1f, 0f, 0f);
-			fluidMat.SetColor ("_EmissionColor", myColor);
+		if(knobRotation > 0 && knobRotation < 90){ 
+			Debug.Log ("change to red"); 
+			myColor = new Color(1f, 0f, 0f); 
+			fluidMat.SetColor ("_EmissionColor", myColor); 
 
 		} else if(knobRotation > 90 && knobRotation < 180){
 			Debug.Log ("change to blue");
@@ -52,6 +53,5 @@ public class TurnKnobColor : MonoBehaviour {
 			myColor = new Color (0f, 1f, 1f);
 			fluidMat.SetColor ("_EmissionColor", myColor);
 		}
-
-	}
-}
+	} 
+} 
