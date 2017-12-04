@@ -5,11 +5,12 @@ using UnityEngine;
 public class TestTubeManager : MonoBehaviour {
 	public GameObject Knob_1, Knob_2, Knob_3;
 	public Renderer fluidRenderer_1, fluidRenderer_2, fluidRenderer_3;
+	public Color myColor_1, myColor_2, myColor_3;
 
 	[SerializeField]
 	public bool CPuzzle_1, Cpuzzle_2, Cpuzzle_3;
 	public float knobRotation_1, knobRotation_2, knobRotation_3;
-	private Color myColor_1, myColor_2, myColor_3;
+	//private Color myColor_1, myColor_2, myColor_3;
 	private Quaternion startRotation_1, startRotation_2, startRotation_3;
 	private Vector3 startUp_1, startRight_1, startUp_2, startRight_2, startUp_3, startRight_3;
 	public Transform door;
