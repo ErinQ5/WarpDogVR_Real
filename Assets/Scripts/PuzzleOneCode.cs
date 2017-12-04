@@ -33,6 +33,10 @@ public class PuzzleOneCode : MonoBehaviour {
         }
     }
 
+    public bool isDone() {
+        return done;
+    }
+
     public void checkMatch() {
         if (!done) {
             bool match = true;
