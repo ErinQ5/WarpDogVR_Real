@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0030328, g: 0.0028995115, b: 0.003138824, a: 1}
+  m_IndirectSpecularColor: {r: 0.003089778, g: 0.0028942404, b: 0.0031967133, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3718,6 +3718,17 @@ PlayableDirector:
     value: {fileID: 671167470}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &671167473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 671167470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903709261050ed540a4ac6f12b52af53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &675371219
 GameObject:
   m_ObjectHideFlags: 0
@@ -4156,6 +4167,31 @@ Prefab:
     - target: {fileID: 4816164961572918, guid: 449d7bfa64e37444eaa87a3112d4f853, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -195.392
+      objectReference: {fileID: 0}
+    - target: {fileID: 102133905293797822, guid: 449d7bfa64e37444eaa87a3112d4f853,
+        type: 2}
+      propertyPath: m_Text
+      value: 18953
+      objectReference: {fileID: 0}
+    - target: {fileID: 102133905293797822, guid: 449d7bfa64e37444eaa87a3112d4f853,
+        type: 2}
+      propertyPath: m_CharacterSize
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 102133905293797822, guid: 449d7bfa64e37444eaa87a3112d4f853,
+        type: 2}
+      propertyPath: m_Anchor
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 102133905293797822, guid: 449d7bfa64e37444eaa87a3112d4f853,
+        type: 2}
+      propertyPath: m_FontSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 102133905293797822, guid: 449d7bfa64e37444eaa87a3112d4f853,
+        type: 2}
+      propertyPath: m_OffsetZ
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 449d7bfa64e37444eaa87a3112d4f853, type: 2}
@@ -14766,7 +14802,7 @@ MonoBehaviour:
   Knob_3: {fileID: 2016408128}
   disableParts: {fileID: 105307801}
   removableFenceColliders: {fileID: 1737050266}
-  code: 01000000020000000300000004000000
+  code: 0100000008000000090000000500000003000000
 --- !u!1 &1431395116
 GameObject:
   m_ObjectHideFlags: 0
@@ -15794,7 +15830,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603025739}
-  m_Text: 1234
+  m_Text: 0000
   m_OffsetZ: 0
   m_CharacterSize: 0.3
   m_LineSpacing: 1
@@ -20359,7 +20395,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1751601900}
-  m_LocalRotation: {x: 0.65814465, y: 0.6519038, z: 0.28826857, w: 0.24242148}
+  m_LocalRotation: {x: 0.6581447, y: 0.65190387, z: 0.2882686, w: 0.2424215}
   m_LocalPosition: {x: 5.949999, y: -0.80000013, z: 2.790001}
   m_LocalScale: {x: 0.17926645, y: 3.3480544, z: 0.2547869}
   m_Children: []
