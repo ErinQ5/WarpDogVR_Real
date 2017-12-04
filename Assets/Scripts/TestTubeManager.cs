@@ -136,7 +136,7 @@ public class TestTubeManager : MonoBehaviour {
 
 	public void MatchingColor(bool Color_1, bool Color_2, bool Color_3){
 		if(Color_1 == true && Color_2 == true && Color_3 == true){
-			//door.transform.position = Vector3.Lerp(door.transform.position, door.transform.position + 90f * Vector3.up, Time.deltaTime * 5f);
+			door.transform.position = Vector3.Lerp(door.transform.position, door.transform.position + 90f * Vector3.up, Time.deltaTime * 5f);
 			Debug.Log ("a");
 		}
 	}
