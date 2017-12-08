@@ -13,7 +13,7 @@ public class End : MonoBehaviour {
         if(distance.magnitude < 1) {
             //win stuff
             if(!done) {
-                this.transform.localScale *= 2;
+                this.transform.localScale *= 5;
                 done = true;
             }
         }
