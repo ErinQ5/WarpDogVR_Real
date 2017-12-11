@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour {
 
@@ -14,6 +15,7 @@ public class End : MonoBehaviour {
             //win stuff
             if(!done) {
                 this.transform.localScale *= 5;
+				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
                 done = true;
             }
         }
