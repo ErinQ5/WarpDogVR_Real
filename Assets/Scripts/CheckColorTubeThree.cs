@@ -12,6 +12,10 @@ public class CheckColorTubeThree : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		tube_3.material.SetColor ("_EmissionColor", testtubeManager.myColor_3);
+		if(testtubeManager.knobRotation_3 == 0){
+		} else {
+			tube_3.material.SetColor ("_EmissionColor", testtubeManager.myColor_3);
+		}
 	}
 }
+
