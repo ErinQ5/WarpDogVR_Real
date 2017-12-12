@@ -7,10 +7,10 @@ public class TestTubeManager : MonoBehaviour {
 	public Renderer fluidRenderer_1, fluidRenderer_2, fluidRenderer_3;
 	public Color myColor_1, myColor_2, myColor_3;
 
-	[SerializeField]
+	//[SerializeField]
 	public bool CPuzzle_1, Cpuzzle_2, Cpuzzle_3;
 	public float knobRotation_1, knobRotation_2, knobRotation_3;
-	//private Color myColor_1, myColor_2, myColor_3;
+
 	private Quaternion startRotation_1, startRotation_2, startRotation_3;
 	private Vector3 startUp_1, startRight_1, startUp_2, startRight_2, startUp_3, startRight_3;
 	public Transform door;
@@ -56,7 +56,7 @@ public class TestTubeManager : MonoBehaviour {
 		}
 
 		//tube1
-		if (knobRotation_1 > 0 && knobRotation_1 < 90) {
+        if (knobRotation_1 > 0 && knobRotation_1 < 90) {
 			CPuzzle_1 = false;
 			myColor_1 = new Color (1f, 0f, 0f);
 			fluidRenderer_1.material.SetColor ("_EmissionColor", myColor_1);
