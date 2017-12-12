@@ -21,8 +21,8 @@ public class FollowBone : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        noYlocation = new Vector3(bone.transform.position.x, .55f, bone.transform.position.z);
         followBone();
+		noYlocation = new Vector3(bone.transform.position.x, 0f, bone.transform.position.z);
 	}
 
 	/*public void IsPickedUp(){
@@ -40,13 +40,19 @@ public class FollowBone : MonoBehaviour {
 				turnToPlayer ();
 				Vector3 MoveVector = noYlocation - transform.position;
                 if (MoveVector.magnitude > 1) {
+					float distanceFromBone = MoveVector.magnitude;
                     MoveVector.Normalize();
                     MoveVector.y = -1f;
+				if (distanceFromBone > 2f) {
+					GetComponent<CharacterController>().Move((MoveVector * speed * Time.deltaTime) * 3f);
+					Debug.Log ("Dog is moving faster now!!!"); 
+				} else {
                     GetComponent<CharacterController>().Move(MoveVector * speed * Time.deltaTime);
                 }
 //				transform.position = Vector3.Lerp (transform.position, noYlocation, speed * Time.deltaTime);
 			}
 		//}
+	}
 	}
 
 //    public void OnCollisionStay(Collision col) {
