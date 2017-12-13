@@ -20,7 +20,7 @@ public class PressButton : MonoBehaviour {
 
     void HandHoverUpdate(Hand hand) {
         if (hand.GetStandardInteractionButtonDown()) {
-            this.transform.position = Vector3.Lerp(this.transform.position, this.transform.position + Vector3.down, Time.deltaTime * 5f);
+            this.transform.position = Vector3.Lerp(this.transform.position, this.transform.position + Vector3.down, Time.deltaTime * 6f);
 			int randomNumber = Random.Range( 0, myButtonSounds.Length ); // "Length" = measure size of array
 			myAudioSource.clip = myButtonSounds[ randomNumber ];
 			myAudioSource.Play();

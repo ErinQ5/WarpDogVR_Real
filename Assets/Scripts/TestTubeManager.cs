@@ -7,6 +7,10 @@ public class TestTubeManager : MonoBehaviour {
 	public Renderer fluidRenderer_1, fluidRenderer_2, fluidRenderer_3;
 	public Color myColor_1, myColor_2, myColor_3;
 
+	public AudioSource myAudioSource;
+	public AudioClip bubbles;
+	public AudioClip correct;
+
 	//[SerializeField]
 	public bool CPuzzle_1, Cpuzzle_2, Cpuzzle_3;
 	public float knobRotation_1, knobRotation_2, knobRotation_3;
@@ -59,7 +63,7 @@ public class TestTubeManager : MonoBehaviour {
         if (knobRotation_1 > 0 && knobRotation_1 < 90) {
 			CPuzzle_1 = false;
 			myColor_1 = new Color (1f, 0f, 0f);
-			fluidRenderer_1.material.SetColor ("_EmissionColor", myColor_1);
+			fluidRenderer_1.material.SetColor ("_EmissionColor", myColor_1);			
 
 		} else if (knobRotation_1 > 90 && knobRotation_1 < 180) {
 			CPuzzle_1 = true;
@@ -77,7 +81,8 @@ public class TestTubeManager : MonoBehaviour {
 			CPuzzle_1 = false;
 			Debug.Log ("change to cyan");
 			myColor_1 = new Color (0f, 1f, 1f);
-			fluidRenderer_1.material.SetColor ("_EmissionColor", myColor_1);
+			fluidRenderer_1.material.SetColor ("_EmissionColor", myColor_1);			
+
 		}
 
 		//tube2
@@ -138,7 +143,7 @@ public class TestTubeManager : MonoBehaviour {
 	public void MatchingColor(bool Color_1, bool Color_2, bool Color_3){
 		if(Color_1 == true && Color_2 == true && Color_3 == true){
 			door.transform.position = Vector3.Lerp(door.transform.position, door.transform.position + 90f * Vector3.up, Time.deltaTime * 5f);
-			Debug.Log ("a");
+			Debug.Log ("Exit Door Opens");
 		}
 	}
 }
