@@ -11,11 +11,10 @@ public class End : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 distance = this.transform.position - dog.transform.position;
-        if(distance.magnitude < 1) {
+        if(distance.magnitude < 2) {
             //win stuff
             if(!done) {
-                this.transform.localScale *= 5;
-				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+				SceneManager.LoadScene ("EndScene");
                 done = true;
             }
         }
