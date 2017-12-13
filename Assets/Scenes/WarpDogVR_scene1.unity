@@ -17704,9 +17704,9 @@ MonoBehaviour:
   myAudioSource: {fileID: 1421959752}
   correct: {fileID: 8300000, guid: 5f244f84102c22e469c65e7129d1d0aa, type: 3}
   testubeManager: {fileID: 499567834}
-  Knob_1: {fileID: 1552428913}
-  Knob_2: {fileID: 807846731}
-  Knob_3: {fileID: 2016408128}
+  Knob_1: {fileID: 667523143}
+  Knob_2: {fileID: 624666437}
+  Knob_3: {fileID: 1595869057}
   disableParts: {fileID: 105307801}
   removableFenceColliders: {fileID: 1737050266}
   code: 0100000008000000090000000500000003000000
