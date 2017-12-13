@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PuzzleOneCode : MonoBehaviour {
 
+	public AudioSource myAudioSource;
+	public AudioClip correct;
+
 	public GameObject testubeManager;
 	public GameObject Knob_1, Knob_2, Knob_3;
 	private TestTubeManager tubeManager;
@@ -53,6 +56,8 @@ public class PuzzleOneCode : MonoBehaviour {
 
             if (match) {
                 //turn off lasers
+				myAudioSource.clip = correct;
+				myAudioSource.PlayOneShot(correct);
                 text.UpdateTextColor(Color.green);
                 text.UpdateString("correct");
                 done = true;
