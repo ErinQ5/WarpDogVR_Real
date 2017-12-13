@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Raycast : MonoBehaviour {
@@ -30,7 +31,8 @@ public class Raycast : MonoBehaviour {
 
                     //Play the audio here
                     //and teleport to start here
-                    /*get rid of this line*/ lastThingWeLookedAt.transform.localScale *= 1.1f;
+                    /*get rid of this line*/
+					SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1); 
                     timeLookedAt = 0f;
                 }
             }
